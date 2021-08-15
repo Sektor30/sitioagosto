@@ -1,0 +1,716 @@
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;    
+}
+
+body{
+    
+    font-family: 'Roboto', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6{
+    color: #1d273b;
+    font-weight: 300;
+    
+}
+
+.contenedor{
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+    overflow: hidden;
+}
+
+.contenedor1{
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+    overflow: hidden;
+    padding: 60px 0;
+    
+}
+
+h1{
+    font-size: 50px;
+}
+
+/* HEADER */
+
+header::before {
+    content: "";
+    display: block;
+    margin-bottom: 120px;
+}
+
+
+nav{
+    width: 100%;
+    height: 100px;
+    background: rgb(255,255,255);
+    background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,249,252,1) 50%, rgba(252,69,96,1) 100%);
+    border-bottom: 1px solid transparent;
+    box-shadow: 1px 1px 10px 0 rgba(60, 48, 48, 0.164);
+    position: fixed ;
+    /* TOP Y Z INDEX PARA FIJAR LA NAV EN HEADER*/ 
+    top: 0;
+    z-index: 100;
+
+    /* transition: ease-in-out 0.5s ; AQUI LA TRANSICION SE GUARDA HASTA UBICAR EÑ JS DESPLAZAMIENTO */ 
+    transition: ease-in-out 0.5s ;
+    
+}
+
+.nav{
+    display: flex;
+    justify-content: space-between;
+    height: 100px;
+    width: 100%;
+    align-items: center ;
+    padding: 0 40px;
+}
+
+
+
+.nav .logo{
+    height: 100px;
+   
+}
+
+.nav .logo img{
+    height: 85px;
+    margin: 10px;
+    
+   
+}
+
+.enlaces-header{
+    font-weight: 300;
+    transition: ease-in-out 0.5s ;
+        
+}
+
+.nav .enlaces-header a{
+    color: rgb(53, 53, 53);
+    font-size: 26px;
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+.nav .enlaces-header>a:hover{
+   
+    color:#df333fe2 ;
+    transition: color. 3s;
+      
+}
+
+.hamburger {
+    width: 80px;
+    height: 80px;
+    text-align: center;
+    z-index: 100;
+    /* UN CURSOR POINTER PARA ACTIVAR LA MANO*/
+    cursor: pointer;
+    display: none;
+    /* transition: color 0.5s ease-in; */
+}
+
+.hamburger > i{
+    font-size: 25px;
+    line-height: 80px;
+
+}
+
+.contenido-header{
+    width: 100%;
+    height: 600px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center  ;
+}
+
+.contenido-header > img{
+    width: 550px;
+/*---------------------llamar animación---------------------------- */
+    animation: ease-in animat 0.50s;
+}
+
+/*---------------------ANIMACION DE IMAGEN---------------------------- */
+
+@keyframes animat{
+    0%{
+        transform: scale(0);
+    }100%{
+        transform: scale(1);
+    }
+}
+/*---------------------ANIMACION DE IMAGEN---------------------------- */
+
+.textos-header{
+    margin: 0 0 0 30px;
+}
+
+.contenido-header p{
+    font-weight: 100;
+    margin-top: 14px;
+    color: rgb(75, 75, 75);
+
+
+}
+
+.contenido-header a{
+    margin: 28px 0 0 0 ;
+    width: 130px;
+    display: inline-block;
+    background: #c23c55 ;
+    text-align: center;
+    color: white;
+    padding: 12px 0;
+    text-decoration: none;
+    font-weight: 400;
+    text-transform: uppercase;
+    font-size: 14px;
+    border-radius: 5px;
+    box-shadow: 0 8px 32px rgba(240, 52, 80, 0.68);
+
+}
+
+
+
+.titulo{
+    font-size: 50px;
+    /* border: 5px solid black; */
+    margin-left: 30px; 
+}
+
+/*ABOUT US*/
+
+.about-us {
+    background: #a2a2a2;
+
+}
+/* LA MAGIA DE LA SEPARACION DE LOS CUADREOS DE CONTENIDOS */
+/* ESTE ES EL CONTENEDOR MAESTRO DE ESTA SECCION*/
+.contenedor-articulo {
+    display: flex;
+    flex-wrap: wrap ;
+    margin-top: 60px;
+    justify-content: space-around;
+
+}
+
+.articulo {
+    width: 29%;
+    background: white;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    padding: 45px 30px 60px 30px ;
+
+}
+
+.articulo:hover{
+    box-shadow: 0 4px 10px rgba(184, 184, 184, 0.666) ;
+    transition: 0.3s;
+
+}
+
+.articulo>i{
+    font-size: 30px;
+    color: white;
+    background:#c23c55 ;
+    display: inline-block;
+    width: 70px;
+    height: 70px;
+    text-align: center;
+    padding-top: 20px;
+    border-radius: 50%;
+    box-shadow: 0 8px 32px rgba(240, 52, 80, 0.68);
+
+}
+
+.articulo>h3 {
+    font-size: 24px;
+    margin-top: #5D6678;
+    margin-top: 15px;
+    padding-bottom: 20px;
+}
+
+.articulo>a{
+    color: #5D6678;
+    font-weight: 400;
+    text-decoration: none;
+}
+
+.articulo>a:hover{
+    color: #df333fe2;
+    /*TRANSICION DE COLOR DE LA LETRA - GRIS A ROJO*/
+    transition: color .5s;
+}
+
+/*questions */
+
+.questions{
+    /* width: 100%;*/
+    height: 600px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center  ;
+}
+
+.questions > img{
+    width: 550px;
+/*---------------------llamar animación---------------------------- */
+    
+}
+
+.textos-questions{
+    margin: 0 0 0 30px;
+}
+
+.textos-questions p{
+    font-weight: 100;
+    margin-top: 14px;
+    color: rgb(75, 75, 75);
+}
+
+.textos-questions a{
+    margin: 28px 0 0 0 ;
+    width: 130px;
+    display: inline-block;
+    background: #c23c55 ;
+    text-align: center;
+    color: white;
+    padding: 12px 0;
+    text-decoration: none;
+    font-weight: 400;
+    text-transform: uppercase;
+    font-size: 14px;
+    border-radius: 5px;
+    box-shadow: 0 8px 32px rgba(240, 52, 80, 0.68);
+
+}
+
+
+/*RESULTS*/
+
+.results{
+    background: #c23c55;
+    padding-top: 30px;
+}
+
+.conten-results{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.numbers{
+    width: 60%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-evenly ;
+}
+
+.numbers .number{
+    width: 45%;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    border-radius: 10px;
+    padding: 40px 35px;
+    margin-bottom: 20px;
+}
+
+.numbers .number h4{
+    color: #fff;
+    font-size: 50px;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.numbers .number p{
+    color: #f2f5fc;
+    font-weight: 300;
+}
+
+.results-text{
+    width: 37%;
+}
+
+.results-text h4{
+    color: #fff;
+    font-size: 40px;
+
+}
+
+.results-text p{
+    color: #fff;
+    font-weight: 300;
+    margin: 20px 0;
+}
+.results-text >a{
+    color: #fff;
+    background: #2d2d2dc7;
+    text-decoration: none;
+    display: inline-block;
+    border: 1px solid #fff;
+    padding: 10px 0;
+    width: 120px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+/*SERVICE*/
+
+.services{
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.services >img{
+    width: 500px;
+}
+
+.box-skills{
+    margin: 30px 30px 0 0;
+
+}
+
+.box-skills h4{
+    font-size: 24px;
+    background: #aba6a677;
+    width: 350px;
+    border-radius: 6px;
+    padding: 10px 0 10px 15px;
+    margin-bottom: 10px;
+   
+}
+
+.box-skills i{
+    color: rgb(255, 80, 127) ;
+    font-size: 20px;
+}
+
+/* FOOTER*/
+footer{
+    background: #f2f2f2 ;
+    padding: 60px 0;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin: auto;
+
+
+} 
+
+.partFooter{
+    width: 20%;
+    text-align: center;
+}
+
+.partFooter h4{
+    color: #1d273b;
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 30px;
+    
+    
+}
+
+.partFooter a{
+    display: block;
+    text-decoration: none;
+    color: rgb(177, 172, 172);
+    font-weight: 300;
+    transition: color .05s ease-in-out;
+    margin-bottom: 10px; 
+
+}
+
+.partFooter a:hover{
+    color:#c23c55 ;
+
+}
+
+
+
+.partFooter img{
+    
+    width: 30%;
+
+}
+
+.social-media i{
+    font-size: 25px;
+    display: inline-block;
+    color: #adb6c7;
+    border: 1px solid #adb6c7 ;
+    border-radius: 50px;
+    width: 38px;
+    height: 38px;
+    /*--------CENTRAR BORDE - REDOMDO DE LOS ICONOS DE LAS REDES-------*/
+    line-height: 36px;
+    cursor: pointer;
+    margin-top: 20px;
+    text-align: center;
+    transition: all ease-in-out .2s;
+    margin-right: 5px;    
+}
+
+.social-media i:hover {
+    color: #fff;
+    background-color: #c23c55;
+    border-color: #ed1f11;;
+
+}
+
+/*BREAK POINT RESPONSIVE------------------------------------------------------------*/
+@media screen and (max-width:800px){
+        .titulo{
+            font-size: 45px;
+        }
+
+        .nav .enlaces-header a{
+        font-size: 18px;
+
+    }
+
+.contenido-header {
+    flex-direction: column;
+    justify-content:space-evenly;
+    height: 720px;
+}
+
+.contenido-header img {
+    width: 400px;
+
+}
+
+.textos-header{
+    margin: 0;
+}
+
+
+/*about-us*/
+
+.articulo{
+    width: 45%;
+}
+
+
+/*  Questions */
+
+.questions{
+    height: 720px;
+    justify-content:space-evenly;
+    flex-direction: column;
+
+}
+
+.questions>img{
+    width: 400px;
+}
+
+
+
+/* RESULTS */
+
+.conten-results{
+    flex-direction: column-reverse ;
+}
+
+.results-text>a{
+    margin-bottom: 60px;
+}
+
+.numbers{
+    width: 100%;
+}
+
+.results-text{
+    width: 100%;
+    padding-left: 30px;
+}
+
+
+/* SERVICES */
+
+.services{
+    flex-direction: column-reverse;
+    align-items: center;
+}
+
+
+.box-skills{
+    margin: 0 0 40px 0;
+}
+
+.box-skills h4{
+    width: 500px;
+
+
+}
+
+
+
+.services>img{
+    width: 400px;
+
+}
+
+/* FOOTER */
+
+footer{
+    justify-content:space-evenly;
+
+}
+
+.partFooter{
+    width: 40%;
+    margin-bottom: 40px;
+}
+}
+
+
+
+/*BREAK POINT RESPONSIVE-CELPHONE--------------------------*/
+
+@media screen and (max-width:600px){
+    .titulo{
+        font-size: 35px;
+    }
+
+h1{
+    font-size: 40px;
+}
+
+.contenido-header{
+    height: 650px;
+}
+
+.nav{
+    padding: 0 10px ;
+}
+
+.contenido-header>img{
+    width: 300px;
+
+}
+
+.enlaces-header{
+    /*display: none;*/
+    position: fixed;
+    
+        background: rgb(240,240,240);
+        background: linear-gradient(0deg, rgba(240,240,240,1) 0%, rgba(207,207,207,1) 100%);
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        /*border: 1px solid black;*/
+        align-items: center;
+        flex-direction: column;
+        justify-content: space-evenly;
+        padding-top: 65px;
+        /*COVER EN CIRCULO DEL MENU*/
+        clip-path: circle(0% at 87% 6%)
+}
+    /*OTRA CLASE PARA DEFINIR APERTURA DEL MENU */
+    .nav .menudos{
+    -webkit-clip-path: circle(133.8% at 100% 0);        
+    clip-path: circle(150% at 100% 0);
+}
+
+.nav .menudos a{
+    width: 60%;
+    align-items: center;
+    padding: 0 90px;
+    
+    background: rgb(240,240,240);
+    background: linear-gradient(0deg, rgba(240,240,240,1) 0%, rgba(229,229,229,1) 91%);
+
+}
+
+.nav .menudos >a:hover{
+    background: rgb(0 0 0 / 83%);
+    transition: 0.5s;
+
+
+}
+
+
+
+.nav .enlaces-header a{
+        color: rgb(6, 3, 9);
+        font-size: 30px;
+               
+}
+
+
+.nav .enlaces-header>a:hover{
+   
+    color:#df333fe2 ;
+    transition: color. 0.5s;   
+}
+
+.hamburger{
+    display: block;
+}
+
+/*about-us III*/
+
+.articulo{
+    width: 95%;
+}
+
+/*  Questions III*/
+
+.questions>img{
+    width: 300px;
+
+}
+
+/* RESULTS III */
+
+.numbers .number{
+    width: 95%;
+}
+
+.results-text h4{
+    font-size: 35px;
+
+}
+
+/*services*/
+
+.services>img{
+    width: 200px;
+}
+
+.box-skills h4{
+    width: 110%;
+       
+}
+
+
+.partFooter{
+    width: 95%;
+    margin-bottom: 40px;
+}
+
+}
+
+/*BREAK POINT RESPONSIVE-CELPHONE- S-------------------------*/
+
+@media screen and (max-width:450px){
+    .nav .menudos a{
+        width: 70%;
+        align-items: center;
+        padding: 0 80px;
+        
+        background: rgb(240,240,240);
+        background: linear-gradient(0deg, rgba(240,240,240,1) 0%, rgba(229,229,229,1) 91%);
+    
+    }
+}
